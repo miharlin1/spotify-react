@@ -2,6 +2,11 @@
 import {useEffect, useState} from 'react';
 import axios from "axios"; //help preform get request to API endpoint
 
+import ArtistList from './components/ArtistList';
+import ConfirmButton from './components/ConfirmButton';
+import TextBox from './components/TextBox';
+import './App.css';  // Import global styles
+
 function App() {
   const CLIENT_ID = "b37847709b594effa9faae555c0050e8"
   const REDIRECT_URI = "http://localhost:3000"
@@ -106,45 +111,23 @@ const renderArtists = () => {
     <input type="text" onChange={e => setSearchKey(e.target.value)}/>
     <button type={"submit"}>Search</button>
 </form>
-<div style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",  // Automatically adjust columns based on screen size
-        gap: "15px",  // Space between grid items
-        marginBottom: "20px",  // Space between grid and button
-      }}>
-{renderArtists()}</div>
+<ArtistList 
+        artists={artists} 
+        onArtistClick={handleArtistClick} 
+        selectedArtistId={selectedArtistId} 
+      />
           </header>
           <div style={{ marginTop: '20px' }}>
-        <textarea
-          value={textBoxValue}
-          onChange={handleTextBoxChange}
-          placeholder="Enter your comments here..."
-          style={{
-            width: "100%",
-            padding: "10px",
-            borderRadius: "5px",
-            border: "1px solid #ccc",
-            fontSize: "16px",
-            minHeight: "100px", // Set a minimum height for the text area
-            resize: "vertical", // Allows user to resize vertically
-          }}
-        />
+          <TextBox 
+        value={textBoxValue} 
+        onChange={handleTextBoxChange} 
+      />
       </div>
           {/* Confirm Selection Button */}
-      <button 
-        onClick={handleConfirmSelection} 
-        style={{
-          marginTop: '20px', 
-          padding: '10px 20px', 
-          backgroundColor: '#4CAF50', 
-          color: 'white', 
-          border: 'none', 
-          borderRadius: '5px', 
-          cursor: 'pointer'
-        }}
-      >
-        Create Post!
-      </button>
+          <ConfirmButton 
+        onConfirm={handleConfirmSelection} 
+        selectedArtistId={selectedArtistId} 
+      />
       </div>
   );
   {renderArtists()}
