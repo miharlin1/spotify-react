@@ -1,5 +1,5 @@
 import React from 'react';
-
+//styling based on code from Chat GPT when asked to style artist card in grid formation
 const ArtistCard = ({ artist, onClick, isSelected }) => {
   return (
     <button 

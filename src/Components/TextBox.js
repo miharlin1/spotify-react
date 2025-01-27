@@ -1,5 +1,5 @@
 import React from 'react';
-
+//styling based on code from Chat GPT 
 const TextBox = ({ value, onChange }) => {
   return (
     <div style={{ marginTop: '20px' }}>

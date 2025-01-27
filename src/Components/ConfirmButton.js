@@ -1,5 +1,5 @@
 import React from 'react';
-
+//styling based on code from Chat GPT 
 const ConfirmButton = ({ onConfirm, selectedArtistId }) => {
   return (
     <button 

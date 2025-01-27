@@ -1,4 +1,8 @@
-
+/*
+*Code framework based on https://dev.to/dom_the_dev/how-to-use-the-spotify-api-in-your-react-js-app-50pn
+* @author Mia Harlin
+* DALI 2025 application
+ */
 import {useEffect, useState} from 'react';
 import axios from "axios"; //help preform get request to API endpoint
 
@@ -6,6 +10,7 @@ import ArtistList from './components/ArtistList';
 import ConfirmButton from './components/ConfirmButton';
 import TextBox from './components/TextBox';
 import './App.css';  // Import global styles
+
 
 function App() {
   const CLIENT_ID = "b37847709b594effa9faae555c0050e8"
@@ -56,17 +61,15 @@ function App() {
 const handleArtistClick = (artistId) => {
   console.log(`Artist with ID: ${artistId} was clicked!`);
   setSelectedArtistId(artistId); // Update the state with the clicked artist ID
-  // You can replace this with any logic you want, like navigation or state updates
-  // For example, if you're using React Router:
-  // history.push(`/artists/${artistId}`);
+
 };
   // Handle confirm selection
   const handleConfirmSelection = () => {
     if (selectedArtistId !== null) {
       const selectedArtist = artists.find(artist => artist.id === selectedArtistId);
       alert(`You selected: ${selectedArtist.name}`);
-      // You can add more logic here (e.g., navigating to a new page, updating state, etc.)
-    } else {
+      //create post, redirect to new page in future
+   } else {
       alert('Please select an artist first!');
     }
   };
@@ -123,7 +126,6 @@ const renderArtists = () => {
         onChange={handleTextBoxChange} 
       />
       </div>
-          {/* Confirm Selection Button */}
           <ConfirmButton 
         onConfirm={handleConfirmSelection} 
         selectedArtistId={selectedArtistId} 

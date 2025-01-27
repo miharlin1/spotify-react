@@ -1,6 +1,6 @@
 import React from 'react';
 import ArtistCard from './ArtistCard';
-
+//styling based on code from Chat GPT 
 const ArtistList = ({ artists, onArtistClick, selectedArtistId }) => {
   return (
     <div style={{
