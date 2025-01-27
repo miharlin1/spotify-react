@@ -7,6 +7,9 @@ With more time, this Users would be able to select a song, not an artist. They w
 
 This project implements the Spotify API, and with more time would also implement the Weather API.
 
+I large portion of this project follows this tutorial : https://dev.to/dom_the_dev/how-to-use-the-spotify-api-in-your-react-js-app-50pn.
+I also followed this react tutorial to develop my skills!: https://react.dev/learn/tutorial-tic-tac-toe
+
 To set up:
 This app should run locally on: http://localhost:3000/
 I am not exactly sure how to setup a project downloaded from Github onto a different computer. I had to create an app through https://developer.spotify.com/ and get a client ID for the app to direct to the Spotify Authentication page. Ensure that the LTS version of react is installed, along with yarn. With yarn I did "yarn add axio" which will handle our HTTP request. Also "yarn add react-router-dom."
