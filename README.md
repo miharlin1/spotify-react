@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+DALI Developer Application API Challenge!
+By Mia Harlin, January 2025.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For my application, I created a platform to allow Users to share songs with their community anonomously. In the part I was able to implement, the User can click the login button and will be redirected to the Spotify Authentication page., which will then authenticate and get a token. After logging in and accepting Terms&Conditions you will be redirected back to the app at http://localhost:3000/. A hash is passed to the URL which contains the access token which we need to authorize the API calls. Using axios, the user can input information into the search bar and perform a GET request to the spotify API endpoint. Then the data is fetched and stored in artists. I created component files to help format and render this data. The User can then select an artist, create a comment, and post it!
 
-## Available Scripts
+With more time, this Users would be able to select a song, not an artist. They would be able to keep track of their previous posts, upvote and downvote other people's posts, and favorite posts for future reference. Posts could also have categories, like "New Discovery" and "Throwback" to help organize the song posts. They could also have categories describing what weather this song is good to listen to, in your opinion. With this feature, Users could also filter song posts based on today's current weather. For example, on a rainy day they could see what songs other Users have posted and categorized under rainy weather.
 
-In the project directory, you can run:
+This project implements the Spotify API, and with more time would also implement the Weather API.
 
-### `npm start`
+To set up:
+This app should run locally on: http://localhost:3000/
+I am not exactly sure how to setup a project downloaded from Github onto a different computer. I had to create an app through https://developer.spotify.com/ and get a client ID for the app to direct to the Spotify Authentication page. Ensure that the LTS version of react is installed, along with yarn. With yarn I did "yarn add axio" which will handle our HTTP request. Also "yarn add react-router-dom."
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img width="1073" alt="Screenshot 2025-01-26 at 9 21 31 PM" src="https://github.com/user-attachments/assets/fda3c17e-f633-4855-a3bc-30dbd4f9055d" />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Learning Journey**:
+The amazing thing about learning more about coding is realizing how much goes into each feature we see on a screen. It is easy to overlook the feat that is software development. Although my project does not reflect exactly what I set out do, a lot went behind creating this scaffolding of a website. Once the application challenges came out, I knew I had a lot to learn before I could even get started coding. I spent winterim trying to learn how to use React and APIs. I watched all of these tutorials and tried coding along. 
 
-### `npm test`
+The Spotify API was suggested in the DALI API Challenge description, and I thought it sounded like a fun challenge. I could learn about login and authentification with GET and PULL requests. I've watched how music helps connection people throughout my first term at Dartmouth. I've made a lot of friends on my floor by walking by, hearing a good song, and stopping inside to ask what it's called! It's fun to see how different people's taste can be, but also how similar they can be. With this idea, I was also inspiring by how a lot of my own playlists are organized by the weather. I have a rainy day playlist, a sunny winter morning playlist, and a summer beach day playlist –of course. Weather and music are quite compatable, so I think it would be cool to implement these two APIs as well.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In terms of the app functionality, I was largely inspired by Fizz. Although I think this can be a problematic platform at times, it is also a way Dartmouth students can connect and communicate. Having a platform like this, but only for music sharing, could be a great way to feel more connected with your community, as well as discover new songs!
 
-### `npm run build`
+I'm proud of the simple project I've created because of how much I had to learn to make it! I learned about installing react and using my terminal to install more packages and helpers. I learned about APIs and the communication behind accessing data from them. If you look at this project's branches, there is a branch called failed-pages-branch. I was unable to implement multipe pages, but I spent a while trying to and definetly learned a lot in the process. The difficulty in this case was how the Spotify Authentication page would redirect back to the app, but not the correct  page route. I think if I had more time, I would want to better understanding how routing works, but this is my first time gaining exposure to different pages in a full stack web application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I knew learning the basics of how to use react would be challenging. However, it helps simplify the process of building more complicated interactive user interfaces, and I know DALI uses it a lot as well! I learned a little about how to organize code in a full stack website. I created a components folder to put component files inside of, rather than having them all on my App.js file. A big challenge with using React was having to also learn Javascript! I had only had experience with Python, but I think it's exciting to learn new programming languages and see how they compare.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The biggest challenge was doing all of this alone. When I had a bug, I didn’t have anyone to help me look over it. The videos also used libraries and software that is always being updated, so it was also challenging to navigate that. But this challenge just helped me understand why so much of full stack development happens in a team! That's why I'm so interested in applying to DALI. I was able to learn a lot through this application process, and I know how much more I could learn inside of DALI.
